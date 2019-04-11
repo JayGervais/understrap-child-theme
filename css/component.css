@@ -1,0 +1,772 @@
+/* custom styles */
+
+html,
+  body{
+    overflow-x:hidden;
+  }
+
+a {
+  color: #000;
+}
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1.font-weight-bold {
+  font-weight: 550!important;
+}
+
+p.font-weight-light {
+  font-weight: 400!important;
+}
+
+/*------------------------- Main Navigation -------------------------*/
+
+#mainNav {
+  background-color: #212529;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 650;
+  opacity: 0.95;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  right: 0;
+  padding: 13px;
+  color: white;
+  border: 0;
+  background-color: #c26d07;
+}
+
+#mainNav .navbar-brand.active,
+#mainNav .navbar-brand:active,
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover {
+  color: #fec503;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #e18c0f;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+  }
+  #mainNav .navbar-brand {
+    font-size: 1.75em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.5s;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+    padding: 12px 0;
+  }
+}
+
+a.navbar-brand.custom-logo-link {
+  max-width: 250px;
+}
+
+/*------------------------- Menu Overlay Nav Styles -------------------------*/
+
+@media screen and (min-width: 991px) {
+  #navClose {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  .overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    z-index: 99999;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  ul.dropdown-menu.show {
+    text-align: center;
+    background-color: #232323;
+  }
+
+  .dropdown-menu.show a {
+    font-weight: 600;
+  }
+
+  .dropdown-menu.show a:hover {
+    background-color: #c36d07;
+  }
+}
+
+/*------------------------- Footer Styles -------------------------*/
+
+#wrapper-footer-full {
+  background-image: url("http://localhost:8888/consolidatedenvironmental/wp-content/uploads/2019/03/footer_pattern.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+div#wrapper-footer.wrapper {
+  background-color: 050707 !important;
+}
+
+h1.entry-title {
+  display: none;
+}
+
+.text-white-50.copyright {
+  font-size: 80%;
+}
+
+.bclink {
+  color: #944121;
+}
+
+span.bclink a:hover {
+  text-decoration: none;
+}
+
+.footer-privacy {
+  opacity: 0.5;
+}
+
+.copyright {
+  padding: 18px 0;
+}
+
+.copyright p {
+  margin: 0;
+  color: #999999;
+}
+
+@media (max-width: 991px) {
+  .copyright p {
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .copyright .social-icons {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .site-info p {
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .site-info .social-icons {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.copyright .social-icons a {
+  padding-right: 15px;
+}
+
+.copyright .social-icons a i {
+  color: #999999;
+}
+
+.copyright .social-icons a i:hover {
+  color: #944121;
+}
+
+/*------------------------- Masthead - Home Page -------------------------*/
+
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 72px);
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(92, 77, 66, 0.8)),
+      to(rgba(92, 77, 66, 0.8))
+    ),
+    url("<?php the_field('hero_image'); ?>");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header.masthead h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.masthead {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 72px;
+    padding-bottom: 0;
+  }
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+  header.masthead h1 {
+    font-size: 2.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.masthead h1 {
+    font-size: 3.4rem;
+  }
+}
+
+#masthead_img {
+  max-width: 400px;
+  padding-bottom: 35px;
+}
+
+/*------------------------- Masthead 2 - Pages -------------------------*/
+
+header.masthead2 {
+  padding-top: 7rem;
+  padding-bottom: calc(5rem - 72px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 992px) {
+  header.masthead2 {
+    height: 45vh;
+    min-height: 21rem;
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+  header.masthead2 p {
+    font-size: 1.15rem;
+  }
+  header.masthead2 h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.masthead2 h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/*------------------------- Widget Box Styles -------------------------*/
+
+#intro-boxes {
+  position: relative;
+  clear: both;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  width: 100%;
+  float: left;
+}
+
+.row-boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.intro-grid {
+  padding: 1em 2em 0;
+  color: rgba(255, 255, 255, 0.8) !important;
+  overflow: hidden;
+  position: relative;
+  width: 33.333%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .intro-grid {
+    width: 100%;
+  }
+  .widgetOne {
+    padding-left: 0px;
+  }
+  .row-boxes {
+    text-align: center;
+  }
+}
+
+.intro-grid a .btn {
+  border: 2px solid #fff !important;
+}
+
+.intro-grid h3 {
+  color: #fff;
+}
+
+.intro-grid.color-1 {
+  background: #050707;
+}
+
+.intro-grid.color-2 {
+  background: #232323;
+}
+
+.intro-grid.color-3 {
+  background: #944121;
+}
+
+/*-Widget Text-*/
+
+.textwidget p {
+  font-size: 90%;
+  opacity: 0.7;
+}
+
+.widgetOne {
+  /* margin-left: 15px; */
+}
+
+/*------------------------- About Section - Home Page -------------------------*/
+
+a.btn.btn-primary.btn-xl.js-scroll-trigger {
+  background-color: transparent;
+  border: 2px solid #e18c0f;
+}
+
+a.btn.btn-primary.btn-xl.js-scroll-trigger:hover {
+  background-color: transparent;
+  border: 2px solid #c26d07;
+}
+
+hr.divider.my-4 {
+  background-color: #fff;
+}
+
+hr.divider-two.my-4 {
+  background-color: #e18c0f;
+}
+
+.about-section {
+  padding-top: 5rem;
+  background: #944121;
+}
+
+.about-section p {
+  margin-bottom: 5rem;
+}
+
+.bg-black {
+  background-color: #161616 !important;
+}
+
+@media (min-width: 992px) {
+  .projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+  }
+}
+
+.projects-section .project-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+
+@media (min-width: 992px) {
+  .projects-section .project-text hr {
+    border-color: #e18c0f;
+    border-width: 0.25rem;
+    width: 30%;
+  }
+}
+
+#projects {
+  /*
+  background-image: url("http://localhost:8888/consolidatedenvironmental/wp-content/uploads/2019/03/gplaypattern-faded.png");
+  background-repeat: repeat; */
+}
+
+.project-padding {
+  padding-top: 70px;
+  /* padding-bottom: 55px; */
+}
+
+.project-box-padding {
+  padding-top: 30px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+div.row.justify-content-center.no-gutters.mb-5.mb-lg-0 {
+  margin-bottom: 0rem !important;
+}
+
+.text-pad {
+  padding-bottom: 70px;
+}
+
+.bg.text-center.h-100.project {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*------------------------- BG Image / Service Section -------------------------*/
+
+.bg-image-full {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay-text {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/*------------------------- Element Animations -------------------------*/
+
+.hideme {
+  opacity: 0;
+}
+
+.animation-element {
+  opacity: 0;
+  position: relative;
+}
+
+.animation-element.slide-right {
+  opacity: 0;
+  -moz-transition: all 500ms linear;
+  -webkit-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+  -moz-transform: translate3d(100px, 0px, 0px);
+  -webkit-transform: translate3d(100px, 0px, 0px);
+  -o-transform: translate(100px, 0px);
+  -ms-transform: translate(100px, 0px);
+  transform: translate3d(100px, 0px, 0px);
+}
+
+.animation-element.slide-right.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.animation-element.slide-left {
+  opacity: 0;
+  -moz-transition: all 500ms linear;
+  -webkit-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+  -moz-transform: translate3d(-100px, 0px, 0px);
+  -webkit-transform: translate3d(-100px, 0px, 0px);
+  -o-transform: translate(-100px, 0px);
+  -ms-transform: translate(-100px, 0px);
+  transform: translate3d(-100px, 0px, 0px);
+}
+
+.animation-element.slide-left.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* FadeInUp - Animation */
+
+@keyframes slide-up {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animation-element {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animation-element.slide-up {
+  opacity: 0;
+}
+
+.animation-element.slide-up.in-view {
+  opacity: 0;
+  animation-name: slide-up;
+  -webkit-animation-name: slide-up;
+}
+
+/*------------------------- Page Wrapper Styles -------------------------*/
+
+div#full-width-page-wrapper.wrapper {
+  background-color: #944121;
+}
+
+h1.entry-title {
+  color: #fff;
+}
+
+.textpage {
+  color: #fff;
+}
+
+/*------------------------- Contact Page Styles -------------------------*/
+
+.site-section.bg.contact-background {
+  padding-top: 50px;
+}
+
+.contact {
+  background-color: #fff;
+  opacity: 0.75;
+  border: 1px solid #b2b2b2;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-background {
+  /*
+  background-image: url("http://localhost:8888/consolidatedenvironmental/wp-content/uploads/2019/03/gplaypattern-faded.png");
+  background-repeat: repeat;
+  */
+}
+
+p.contact {
+  color: #050707 !important;
+}
+
+.contact-right {
+  background-color: #944121;
+}
+
+.contact_info .info_item {
+  position: relative;
+  padding-left: 45px;
+}
+
+.contact_info .info_item i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 25px;
+  line-height: 24px;
+  color: #944121;
+}
+
+.contact_info .info_item h6 {
+  font-size: 16px;
+  line-height: 24px;
+  color: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #222222;
+}
+
+.contact_info .info_item h6 a {
+  color: #222222;
+}
+
+.contact_info .info_item p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.btn-outline-primary,
+.wpcf7 input[type="submit"] {
+  background-color: transparent;
+  border: 2px solid #e18c0f;
+}
+
+i.fa.fa-instagram.fa-social_icon {
+  position: inherit;
+  font-size: 30px;
+  color: #232323;
+  letter-spacing: 10px;
+  padding-top: 7px;
+}
+
+i.fa.fa-facebook-official.fa-social_icon {
+  position: inherit;
+  color: #232323;
+  font-size: 30px;
+  letter-spacing: 10px;
+  padding-top: 7px;
+}
+
+/* - Contact Screen Size Fix - */
+
+@media screen and (max-width: 992px) {
+  h6.phone {
+    margin-top: -10px;
+  }
+
+  .contact_info .info_item i {
+    position: inherit;
+  }
+
+  .contact_info .info_item {
+    position: inherit;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+    .contact_info .info_item {
+    position: relative;
+    padding-left: 45px;
+  }
+
+  .contact_info .info_item i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 25px;
+    line-height: 24px;
+    color: #944121;
+  }
+
+  h6.phone {
+    margin-top: 0;
+  }
+}
+
+/*------------------------- Privacy Policy Page Styles -------------------------*/
+
+img.attachment-large.size-large.wp-post-image {
+  display: none;
+}
+
+div#full-width-page-wrapper.wrapper.privacy-policy-page {
+  background-color: #f7f7f7;
+  /* background-image: url("http://localhost:8888/consolidatedenvironmental/wp-content/uploads/2019/03/gplaypattern.png");
+  background-repeat: repeat; */
+}
+
+/*------------------------- Service Page Styles -------------------------*/
+
+.serviceicons {
+  color: #050707;
+}
+
+.serviceOne {
+  background-color: #0d545d;
+}
+
+.serviceTwo {
+  background-color: #232323;
+}
+
+.align-items-stretch {
+  margin-bottom: 2rem!important;
+}
+
+div#full-width-page-wrapper.wrapper.page-id-231 {
+  background-color: #b2b2b2;
+}
+
+
